@@ -1,0 +1,15 @@
+.grid{
+    display:grid;
+    width: 100%;
+    max-width: 800px;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: aqua;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.card{
+    width: 100%;
+    height: 200px;
+    background-color: #333;
+}
