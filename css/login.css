@@ -4,6 +4,8 @@
     flex-direction: column;
     height: 100vh;
     justify-content: center;
+    background-image: url(../images/Medo.jpg);
+    background-size: cover;
 }
 
 .login_header{
@@ -19,7 +21,7 @@
 }
 
 .login_header h1{
-    color: #333;
+    color: #f0e0f3;
     font-size: 1.5em;
     font-family: 'Times New Roman', Times, serif;
 }

@@ -1,4 +1,6 @@
 const grid = document.querySelector('.grid')
+const spanPlayer = document.querySelector('.player')
+const timer = document.querySelector('.timer')
 
 const characters = [
     'amelie',
@@ -28,7 +30,8 @@ const checkEndGame = () => {
     const disabledCard = document.querySelectorAll('.disabled-card')
 
     if(disabledCard.length == 20) {
-        alert('Parabens, ganhou ao transcender!')
+        clearInterval(this.loop)
+        alert(`Parabens,  ${spanPlayer.innerHTML}! Você transcedeu.`)
     }
 }
 
@@ -103,4 +106,20 @@ const loadGamer = () =>{
     })
 }
 
-loadGamer()
+const startTimer = () =>{
+    this.loop = setInterval(() => {
+        const currentTime = +timer.innerHTML;
+        timer.innerHTML = currentTime + 1
+    }, 1000)
+
+}
+
+window.onload = () => {
+
+const playerName = localStorage.getItem('player');
+spanPlayer.innerHTML = playerName
+
+startTimer()
+loadGamer();
+}
+
